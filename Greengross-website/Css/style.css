@@ -1,0 +1,243 @@
+/* Google Fonts Link*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+  --main-color: #77D970;
+  --black-color: #121212;
+  --border-color: 0.1rem solid rgba(255, 255, 255, 0.4);
+  --blue-color: #071952;
+  --yellow-color: #c8d723;
+
+}
+.home .content h2 span{
+     color:var(--blue-color)
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+/* Base HTML Codes*/
+html {
+     font-size: 62.5%;
+     overflow-x: hidden;
+     scroll-padding-top: 9rem;
+     scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{ /* barın kendisi*/
+     width: 0.8rem;
+     background-color: white;
+}
+html::-webkit-scrollbar-thumb{
+     border-radius: 3rem;
+     background-color: var(--black-color);
+}
+body{
+     background-color: var(--main-color);
+}
+
+section {
+     padding: 3.5rem 7%;
+}
+
+.btn{
+     margin-top: 1rem;
+     display: inline-block;
+     padding: 2rem 3.75rem;
+     border-radius: 30rem;
+     font-size: 1.8rem;
+     color:white;
+     background-color: var(--black-color);
+     cursor :pointer;
+}
+
+
+
+.heading{   /* BAYİLİKLERİMİZ YAZISI*/
+     color:#071952;
+     font-size: 4rem;
+     margin-bottom: 3.5rem;
+     border-bottom: 0.1rem solid #071952;
+     
+}
+.trademark{ 
+     color: #071952;
+     font-size: 3.5rem;
+}
+/* HEADER START*/
+.header .logo img {
+     height: 10rem;
+    background-color: transparent;
+ }
+
+.header {
+     background-color: white;
+     /*Aşağıdaki 5 satır headerın kendi ve sayfa içinde hizalanmasını sağlar.*/ 
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 7%;
+     margin: 2rem 7%;
+
+     border-radius: 30rem;
+     box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+
+     /*Header'ın scroll'u aşağıya doğru gelmesini istiyorsak alttaki 2 satırı yazmamız lazım. */
+     position: sticky;
+     top: 0;
+     z-index: 1000; /* Header'ın önüne bir şey gelmemesi için yazdık.*/
+}
+.header .navbar a {
+     /* Header içindeki yazıların konumunu ve şeklini ayarlamak için.*/
+     margin: 0 1rem; 
+     font-size: 2rem;
+     color: var(--black-color);
+     border-bottom: 0.1rem solid transparent;
+}
+.header .navbar a:hover{
+     border-color: var(--main-color);
+     padding-bottom: 0.5rem;
+}
+/* HEADER END*/
+
+.header .buttons button{
+     cursor: pointer;
+     font-size: 2.5rem;
+     background-color: transparent;
+}
+
+/* HOME SECTION START*/
+.home{
+     min-height: 100vh; /*İlk açılan ekran kadar alan kaplasın demek */
+     background: url(/images/anasayfa.jpg) no-repeat;
+     background-size: cover;
+     background-position: center;
+     margin-top: -14.5rem; /* resmin sayfanın en üstünden başlaması için yaptık.*/
+     display: flex;
+     align-items: center;
+}
+.home .content{
+     max-width: 60rem;
+}
+.home .content h2{
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.home .content p{
+     font-size: 3rem;
+     font-weight: bold;
+     line-height: 1.8;
+     padding: 1rem 0;
+     color: rgb(255, 255, 255);
+ }
+/* HOME SECTION END*/
+
+/*BAYILIKLERIMIZ SECTION START*/
+
+.menu .box-container{
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+     gap: 1.5rem;
+}
+.menu .box-container .box {
+     padding: 3rem;
+     background-color: var(--blue-color);
+     border-radius: 3rem;
+     min-height: 35rem;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: space-between;
+}
+
+.menu .box-container .box img{
+     width: 100%;
+     object-fit: cover;
+}
+.menu .box-container .box .menu-category{
+     font-size: 1.5rem;
+     color: white;
+}
+.menu .box-container .box h3{
+     color: white;
+     font-size: 2rem;
+     padding: 1rem 0;
+}
+.menu .box-container .box .price {
+     font-size: 2rem;
+     padding: 0.5rem 0;
+}
+.menu .box-container .box .price span {
+     text-decoration: line-through;
+     font-size: 1.5rem;
+     font-weight: 300;
+}
+/*BAYILIKLERIMIZ SECTION END*/
+
+
+/* CONTACT SECTİON START*/
+.contact .row{
+     display: flex;
+     background-color: var(--black-color);
+     flex-wrap: wrap;
+     gap: 1rem;
+}
+.contact .row p{
+     color: white;
+}
+.contact .row iframe {
+     flex: 1 1 45rem;
+     width: 100%;
+     object-fit: cover;
+}
+.contact .row .contact-card {
+     background-color: var(--black-color);
+     color: white;
+     font-size: 2rem;
+     flex: 1 1 45rem;
+     padding: 5rem 2rem;
+     width: 100%;
+     gap: 1.5rem;
+     object-fit: cover;
+     text-align: center;
+}
+.contact .row .contact-adresses{
+     background-color: var(--black-color);
+     color: white;
+     font-size: 2rem;
+     flex: 1 1 45rem;
+     width: 100%;
+     gap: 1.5rem;
+     object-fit: cover;
+     text-align: center;
+}
+
+
+.contact .row .contact-card .line{
+     border-bottom:0.3rem solid white;
+
+}
+/*CONTACT SECTION END*/
+
+
+
+
+/*FOOTER SECTION START*/
+.footer{
+     background-color: var(--black-color);
+     text-align: center;
+     height: 100%;
+     width: 100%;
+}
+.footer .credit{
+     font-size: 2rem;
+     color: white;
+}
+/*FOOTER SECTION END*/
